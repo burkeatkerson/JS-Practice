@@ -1,3 +1,9 @@
+@import 'colors';
+@import 'components';
+@import 'layout';
+
+
+
 :root {
     --background-color: #2b2b2b;
     --light-background-color: #3b3b3b;
@@ -9,7 +15,7 @@ html {
     box-sizing: border-box;
     font-size: 16px;
     background: var(--background-color);
-    color: white;
+    color: map-get($colors, "primary");
     font-family: "Work Sans", sans-serif;
     scroll-behavior: smooth;
 }

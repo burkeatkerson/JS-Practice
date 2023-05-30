@@ -1,0 +1,22 @@
+$colors: (
+    "primary": #507e8d,
+    "secondary": #bbd34e,
+    "xtra-dark": #262626,
+    "dark": #3f4153,
+    "neutral": #676f6b,
+    "light": #acb6ba,
+    "xtra-light": #cad4e4,
+    "info": #58929b,
+    "error": #af3434,
+    "success": #5b905b,
+    "warning": #dc8850,
+    "highlight": #bbd34e,
+);
+
+// generate CSS classes using the colors
+@each $color-name,
+$color in $colors {
+    .#{'color-' + $color-name} {
+        color: $color;
+    }
+}
