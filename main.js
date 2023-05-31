@@ -4,6 +4,18 @@ const weatherCondition = "sunny";
 const userLocation = "Texas";
 const temp = 75;
 
+// new Date().getHours();
+
+setInterval(function () {
+	let localTime = new Date();
+	document.querySelector("span[data-time=hours").textContent =
+		localTime.getHours();
+	document.querySelector("span[data-time=minutes").textContent =
+		localTime.getMinutes();
+	document.querySelector("span[data-time=seconds").textContent =
+		localTime.getSeconds();
+}, 1000);
+
 //Nav Menu, open -> close
 document.querySelector("#open-nav-menu").addEventListener("click", function () {
 	document.querySelector("header nav .wrapper").classList.add("nav-open");
@@ -15,7 +27,6 @@ document
 	});
 
 //temp conversion
-
 function tempToCel(temp) {
 	var celsius = Math.round((temp - 32) * (5 / 9));
 	return celsius;
