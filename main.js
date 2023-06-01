@@ -4,24 +4,6 @@ const weatherCondition = "sunny";
 const userLocation = "Texas";
 const temp = 75;
 
-// new Date().getHours();
-
-setInterval(function () {
-	let localTime = new Date();
-	document.querySelector("span[data-time=hours").textContent = localTime
-		.getHours()
-		.toString()
-		.padStart(2, "0");
-	document.querySelector("span[data-time=minutes").textContent = localTime
-		.getMinutes()
-		.toString()
-		.padStart(2, "0");
-	document.querySelector("span[data-time=seconds").textContent = localTime
-		.getSeconds()
-		.toString()
-		.padStart(2, "0");
-}, 1000);
-
 //Nav Menu, open -> close
 document.querySelector("#open-nav-menu").addEventListener("click", function () {
 	document.querySelector("header nav .wrapper").classList.add("nav-open");
@@ -61,4 +43,3 @@ document
 		}
 	});
 
-//image gallery
