@@ -14,8 +14,13 @@ const galleryImgs = [
 	},
 ];
 
-// for (let i in galleryImgs) {
-// 	console.log(galleryImgs[i]);
-// }
+let mainImg = document.querySelector("#gallery > img");
+let thumbnails = document.querySelector("#gallery .thumbnails");
+//thumbs -> <img src="./assets/gallery/MuscleCar.png"
+//          alt="Thumbnail Image 1" data-array-index="0" data-selected="true">
 
-//galleryImgs.forEach(function(image, index))
+mainImg.src = galleryImgs[0].src;
+mainImg.art = galleryImgs[0].art;
+galleryImgs.forEach(function (image, index) {
+	console.log(image.src);
+});
